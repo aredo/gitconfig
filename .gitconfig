@@ -1,5 +1,5 @@
 [user]
-  name = Hengkiardo
+	name = Hengkiardo
 	email = hengki.sihombing@gmail.com
 [push]
 	default = upstream	
@@ -31,7 +31,9 @@
   ps = push origin
   pl = pull origin
   br = branch  
-	b = branch
+  b = branch
+  s = status
+  st = status
   co = checkout
   ch = checkout
   df = diff
@@ -41,7 +43,8 @@
   cm = commit -m
   ca = commit -a
   cam = commit -am
-
+  rebase = pull --rebase
+  clean-master = branch --merged | grep -v "\*" | xargs -n 1 git branch -d
 [merge]
 	tool = diffmerge
 [mergetool "diffmerge"]
